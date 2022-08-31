@@ -1,7 +1,7 @@
 # Instrucciones para ejecutar
 
 1. Clonar el proyecto
-   `git clone `
+   `git clone REPO_STARTERKIT`
 
 2. Crear la base de datos
    `create database blah`

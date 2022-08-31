@@ -1,6 +1,6 @@
 module.exports = {
-  db_name: 'molde',
+  db_name: 'super_red_social',
   db_pass: '1005',
   db_user: 'postgres',
-  app_name: 'Mi Molde',
+  app_name: 'BookFace',
 }

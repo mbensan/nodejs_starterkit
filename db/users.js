@@ -42,13 +42,15 @@ async function create_user (name, email, password) {
   const client = await pool.connect()
 
   // 2. Ejecuto la consulta SQL (me traigo un array de arrays)
-  await client.query(
-    `insert into users (name, email, password) values ($1, $2, $3)`,
+  const { rows } = await client.query(
+    `insert into users (name, email, password) values ($1, $2, $3) returning *`,
     [name, email, password]
   )
 
   // 3. Devuelvo el cliente al pool
   client.release()
+
+  return rows[0]
 }
 
 module.exports = { get_user, create_user }
